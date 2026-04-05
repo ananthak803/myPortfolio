@@ -83,7 +83,6 @@ const Projects = () => {
                 </p>
 
                 <Link
-                  target="_blank"
                   to={`/project/${project.id}`}
                   className="mt-4 inline-flex items-center gap-3 text-yellow-400 font-semibold group w-fit"
                   data-cursor-hover
