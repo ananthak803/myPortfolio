@@ -1,5 +1,6 @@
 import DecryptedText from "./animated/DecryptedText";
-
+import { motion } from "motion/react";
+;
 export default function Menu({ open, setOpen }) {
   return (
     <>
@@ -14,18 +15,18 @@ export default function Menu({ open, setOpen }) {
 
       {open && (
         <div className="fixed inset-0 z-40 flex flex-col justify-center items-center text-white">
-          {["Home", "About me", "Experience","Projects", "Contact"].map((item) => (
-            <a
+          {["Home", "About me", "Experience", "Projects", "Contact"].map((item) => (
+            <motion.a
               key={item}
               href={item === "Home" ? "#" : `#${item.toLowerCase()}`}
               onClick={() => setOpen(false)}
-              className="
-  text-4xl md:text-4xl font-bold text-white my-3
-  transition-all duration-300 ease-out
-  hover:scale-[1.1]
-  
-"
+              className="text-lg md:text-3xl font-bold text-white relative group"
+              whileHover={{ scale: 1.02 }}
             >
+              {/* underline animation */}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-yellow-400 transition-all duration-500 group-hover:w-full" />
+
+              {/* decrypted text inside link */}
               <DecryptedText
                 text={item}
                 speed={150}
@@ -34,7 +35,9 @@ export default function Menu({ open, setOpen }) {
                 useOriginalCharsOnly
                 sequential
               />
-            </a>
+
+            </motion.a>
+
           ))}
         </div>
       )}
