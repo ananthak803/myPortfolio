@@ -15,7 +15,7 @@ export default function Menu({ open, setOpen }) {
 
       {open && (
         <div className="fixed inset-0 z-40 flex flex-col justify-center items-center text-white">
-          {["Home", "About me", "Experience", "Projects", "Contact"].map((item) => (
+          {["Home", "About", "Experience", "Projects", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={item === "Home" ? "#" : `#${item.toLowerCase()}`}
