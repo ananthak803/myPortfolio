@@ -9,13 +9,12 @@ export const projects = [
     detailedDescription: "Raven is a high-performance communication suite designed for privacy-conscious users. It features end-to-end encryption for all messages and media, lightning-fast delivery via Socket.io, and a minimalist design that doesn't get in your way. Built as a full-stack solution, it tackles complex synchronization issues across multiple devices while maintaining zero-knowledge security.",
     image: ravenImg,
     github: "https://github.com/ananthak803/Raven",
-    deployment: "#",
-    tags: ["React", "Express", "Socket.io", "WebRTC", "MongoDB"],
+    deployment: "https://ravenbeta.vercel.app",
+    tags: ["React", "Express", "Socket.io", "Redis", "Kafka", "MongoDB"],
     color: "rgba(245, 158, 11, 0.2)",
     features: [
       "End-to-End Encryption (E2EE)",
       "Real-time Messaging (Socket.io)",
-      "Peer-to-Peer Voice/Video calls (WebRTC)",
       "Multi-device synchronization",
       "Minimalist Dark Mode UI"
     ]
@@ -28,7 +27,7 @@ export const projects = [
     image: jansevaImg,
     github: "https://github.com/ananthak803/janSeva",
     deployment: "#",
-    tags: ["React Native", "Tailwind", "API Integration", "JWT", "MongoDB"],
+    tags: ["React Native", "Express", "Tailwind", "API Integration", "JWT", "MongoDB"],
     color: "rgba(14, 165, 233, 0.2)",
     features: [
       "Document application management",

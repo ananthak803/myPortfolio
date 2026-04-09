@@ -64,14 +64,19 @@ const ProjectDetail = () => {
             </p>
 
             <div className="flex gap-4">
-              <a
-                href={project.deployment}
-                // target="_blank"
-                rel="noopener noreferrer"
-                className="hero-btn-primary"
-              >
-                Launch App
-              </a>
+              {
+                project.deployment !== "#" && (
+                  <a
+                    href={project.deployment}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hero-btn-primary"
+                  >
+                    Launch App
+                  </a>
+                )
+              }
+
               <a
                 href={project.github}
                 target="_blank"
